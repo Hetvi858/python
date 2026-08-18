@@ -8,22 +8,27 @@ student= {
     }
 print(student)
 
+
+
 print('\nkeys:')
 print(student.keys())
-
 
 print('\nvalues:')
 print(student.values())
 
+
 print('\nitems:')
 print(student.items())
+
 
 print("\nget value of 'name':")
 print(student.get('name'))
 
+
 print({'age':21,'id':3})
 print('\ndictionary after update:')
 print(student)
+
 
 student_copy = student.copy()
 print('\ncopied dictionary:')
