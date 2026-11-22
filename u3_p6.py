@@ -1,32 +1,20 @@
-#Write a program to perform file and directory operations using os and sys modules.
+#Write a program to demonstrate method overriding and polymorphism.
 
-import os
-import sys
+class Animal:
+    def sound(self):
+        print("Animal makes a sound")
 
-print("Current Directory:", os.getcwd())
+class Dog(Animal):
+    def sound(self):
+        print("Dog barks")
 
+class Cat(Animal):
+    def sound(self):
+        print("Cat meows")
 
-os.mkdir("MyFolder")
-print("Directory created successfully.")
+a1 = Dog()
+a2 = Cat()
 
-# Create a file inside the directory
-file_path = os.path.join("MyFolder", "sample.txt")
+a1.sound()
+a2.sound()
 
-with open(file_path, "w") as file:
-    file.write("Hello, Python!")
-
-print("File created successfully.")
-
-# Display files and directories
-print("Contents of current directory:")
-print(os.listdir())
-
-# Display command-line arguments
-print("Command-line arguments:", sys.argv)
-
-os.remove(file_path)
-print("File deleted successfully.")
-
-
-os.rmdir("MyFolder")
-print("Directory deleted successfully.")
